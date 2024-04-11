@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'i&k0rsp=fye7$nof3sn)efz0-=9#h1_nv=a9bzl^s6+t=xl*2t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 
 ]
@@ -156,3 +157,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'saikrishna240801@gmail.com'
 EMAIL_HOST_PASSWORD = 'pigz bngv kgfr rlyt'
 EMAIL_USE_TLS = True
+
+#whitenoise settings
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

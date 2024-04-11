@@ -7,6 +7,7 @@ click==8.1.7
 colorama==0.4.6
 cryptography==42.0.5
 defusedxml==0.7.1
+dj-database-url==2.1.0
 Django==3.0.7
 django-allauth==0.42.0
 django-ckeditor==6.7.1
@@ -30,6 +31,7 @@ pytz==2024.1
 requests==2.31.0
 requests-oauthlib==2.0.0
 sqlparse==0.4.4
+typing_extensions==4.11.0
 tzdata==2024.1
 urllib3==2.2.1
 Werkzeug==3.0.2

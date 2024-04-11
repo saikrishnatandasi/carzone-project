@@ -80,7 +80,7 @@
                 </div>
                 <div class="range-slider clearfix">
                                 <label>Price</label>
-                                <div data-min="0" data-max="150000"  data-min-name="min_price" data-max-name="max_price" data-unit="USD" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                                <div data-min="0" data-max="90000000"  data-min-name="min_price" data-max-name="max_price" data-unit="INR" class="range-slider-ui ui-slider" aria-disabled="false"></div>
                                 <div class="clearfix"></div>
                             </div>
                 <div class="form-group">
@@ -127,7 +127,7 @@
                             <a href="{% url 'car_detail' car.id %}" class="car-img">
                                 <div class="tag-2">Featured</div>
                                 <div class="price-box">
-                                    <span> ${{ car.price | intcomma}}</span>
+                                    <span> ₹{{ car.price | intcomma}}</span>
                                 </div>
                                 <img class="d-block w-100" src="{{ car.car_photo.url }}" alt="car" style = "min-height: 262px; max-height: 262px;">
                             </a>
@@ -180,7 +180,7 @@
                             </div>
                             <ul class="facilities-list clearfix">
                                 <li>{{ car.fuel_type }}</li>
-                                <li>{{ car.miles | intcomma }} miles</li>
+                                <li>{{ car.kilometers | intcomma }} kilometers</li>
                                 <li>{{ car.transmission }}</li>
                                 <li>{{ car.body_style }}</li>
                                 <li>{{ car.colour }}</li>
@@ -224,7 +224,7 @@
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>
-                                        <span><i class="flaticon-way"></i></span> {{ car.miles | intcomma }} miles
+                                        <span><i class="flaticon-way"></i></span> {{ car.kilometers | intcomma }} kilometers
                                     </li>
                                     <li>
                                         <span><i class="flaticon-calendar-1"></i></span>{{ car.year }}
@@ -290,7 +290,7 @@
                             <p class="cartype">{{ car.body_style }}</p>
                         </div>
                         <div class="pull-right">
-                            <p class="price">$ {{ car.price | intcomma }}</p>
+                            <p class="price">₹ {{ car.price | intcomma }}</p>
                         </div>
                     </div>
                 </div>
@@ -323,7 +323,7 @@
                             <div class="social-list clearfix">
                                 <a href="{{ team.facebook_link }}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a>
                                 <a href="{{ team.twitter_link}}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a>
-                                <a href="{{ team.google_plus_link }}" target="_blank" class="google-bg"><i class="fa fa-google"></i></a>
+                                <a href="{{ team.instagram_link }}" target="_blank" class="google-bg"><i class="fa fa-instagram"></i></a>
                             </div>
                         </div>
                         <div class="details">
@@ -381,7 +381,7 @@
                                 <img src="img/car-14.jpg" alt="best-car" class="img-fluid modalLabel-2">
                                 <div class="sobuz">
                                     <div class="price-box" style="padding-bottom: 5px;">
-                                        <span class="del-2">$1050.00</span>
+                                        <span class="del-2">₹1050.00</span>
                                     </div>
                                     <div class="">
                                         <a href="car-details.html" class="btn btn-md btn-round btn-theme">Convertible</a>
@@ -416,7 +416,7 @@
                                         <li>Audi</li>
                                         <li>2020</li>
                                         <li>Brand New</li>
-                                        <li>$178,000</li>
+                                        <li>₹178,000</li>
                                     </ul>
                                 </section>
                                 <div class="description">
@@ -432,5 +432,6 @@
         </div>
     </div>
 </div>
+
 
 {% endblock %}

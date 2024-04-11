@@ -32,7 +32,7 @@
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="model">
                                     <option disabled="disabled" selected="selected">Select Model</option>
-                                    {% for model in model_search%}
+                                    {% for model in model_search %}
                                     <option value="{{ model }}">{{ model }}</option>
                                     {% endfor %}
                                 </select>
@@ -42,7 +42,7 @@
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="city">
                                     <option disabled="disabled" selected="selected">Select Location</option>
-                                    {% for city in city_search%}
+                                    {% for city in city_search %}
                                     <option value="{{ city }}">{{ city }}</option>
                                     {% endfor %}
                                 </select>
@@ -52,7 +52,7 @@
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="year">
                                     <option disabled="disabled" selected="selected">Select Year</option>
-                                    {% for year in year_search%}
+                                    {% for year in year_search %}
                                     <option value="{{ year }}">{{ year }}</option>
                                     {% endfor %}
                                 </select>
@@ -64,7 +64,7 @@
                             <div class="form-group">
                                 <select class="selectpicker search-fields" name="body_style">
                                     <option disabled="disabled" selected="selected">Select Type Of Car</option>
-                                    {% for body_style in body_style_search%}
+                                    {% for body_style in body_style_search %}
                                     <option value="{{ body_style }}">{{ body_style }}</option>
                                     {% endfor %}
                                 </select>
@@ -83,7 +83,7 @@
                         <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                             <div class="form-group">
                                 <div class="range-slider">
-                                    <div data-min="0" data-max="150000" data-unit="USD" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
+                                    <div data-min="0" data-max="90000000" data-unit="INR" data-min-name="min_price" data-max-name="max_price" class="range-slider-ui ui-slider" aria-disabled="false"></div>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -122,7 +122,7 @@
                             <div class="facilities-list clearfix">
                                 <ul>
                                     <li>
-                                        <span><i class="flaticon-way"></i></span> {{ car.miles | intcomma }} miles
+                                        <span><i class="flaticon-way"></i></span> {{ car.kilometers | intcomma }} kilometers
                                     </li>
                                     <li>
                                         <span><i class="flaticon-calendar-1"></i></span>{{ car.year }}
@@ -188,7 +188,7 @@
                             <p class="cartype">{{ car.body_style }}</p>
                         </div>
                         <div class="pull-right">
-                            <p class="price">$ {{ car.price | intcomma }}</p>
+                            <p class="price">₹ {{ car.price | intcomma }}</p>
                         </div>
                     </div>
                 </div>

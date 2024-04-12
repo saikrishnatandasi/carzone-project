@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 #     }
 # }
 
-DATABASES = { 'default': dj_database_url.config(default = 'MySQL://root:Saki@2403@localhost/carzone_db')}
+DATABASES = { 'default': dj_database_url.config(default = 'mysql://root:Saki@2403@localhost/carzone_db')}
 
 
 # Password validation

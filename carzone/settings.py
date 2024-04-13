@@ -26,7 +26,7 @@ SECRET_KEY = 'i&k0rsp=fye7$nof3sn)efz0-=9#h1_nv=a9bzl^s6+t=xl*2t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['mysterious-depths-89095-3f3bd64d8c07.herokuapp.com','Carzone.co','www.Carzone.com']
+ALLOWED_HOSTS = ['https://mysterious-depths-89095-3f3bd64d8c07.herokuapp.com/','carzonesaki.co','www.carzonesaki.com']
 
 
 # Application definition
@@ -83,18 +83,14 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'carzone_db',
-#         'USER': 'root',
-#         'PASSWORD': 'Saki@2403',
-#         'HOST': 'localhost',
-#         'PORT': '3306'
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+    }
+}
 
-DATABASES = { 'default': dj_database_url.config(default = 'mysql://root:Saki@2403@localhost/carzone_db')}
+DATABASES = { 'default': dj_database_url.config(default = 'sqlite:///db.sqlite3')}
 
 
 # Password validation
